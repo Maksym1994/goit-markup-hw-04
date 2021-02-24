@@ -3,6 +3,7 @@
   --text-color: #757575;
   --text-white: #ffffff;
   --accent-test-color: #2196f3;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -13,7 +14,9 @@ body {
 }
 
 .page-header {
+  position: sticky;
   border-bottom: 1px solid #ececec;
+  background-color: var(--text-white);
 }
 
 .logo {
@@ -63,10 +66,29 @@ body {
 }
 
 .site-nav .link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+}
+
+.site-nav .link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-test-color);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 250ms var(--timing-function);
+}
+
+.site-nav .link:hover::after {
+  transform: scaleX(1);
 }
 
 .contacts {
@@ -161,12 +183,12 @@ body {
 
 .footer {
   display: inline-flex;
+  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .subscribe {
-  margin-top: 12px;
   margin-left: 70px;
   margin-right: auto;
 }

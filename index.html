@@ -52,14 +52,18 @@
             <div class="overlay">
                 <h1 class="hero-title">Эффективные решения<br>
                 для вашего бизнеса</h1>
-                <a class="button" href="/">Заказать услугу</a>
-            </div>
-
+            <button class="button" data-modal-open>Заказать услугу</button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                            <button data-modal-close>Закрыть</button>
+                        </div>
+                    </div>
+            </div>           
         </section>
         <!--Приимущества-->
         <section class="section features">
             <div class="container">
-                <h2 class="visually-hidden">Особенности проектов</h2>
+                <h2 class="visually-hiddens">Особенности проектов</h2>
                 <ul class="features-list">
                     <li class="item">
                         <div class="thumb">
@@ -112,15 +116,24 @@
         <section class="section no-padding">
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
-            <ul class="section-list">
-                <li class="item">
-                    <a href="/"><img class="section-img" src="./img/img(1).jpg" alt="Прописывает код" width="370"></a>
+            <ul class="working-list">
+                <li class="working-item">
+                    <div class="working-thumb">
+                        <img class="working-img" src="./img/img(1).jpg" alt="Прописывает код" width="370">
+                        <div class="working-text"><p>Десктопные приложения</p></div>
+                    </div>                    
                 </li>
-                <li class="item">
-                    <a href="/"><img class="section-img" src="./img/img(2).jpg" alt="Создает мобильные приложения" width="370"></a>
+                <li class="working-item">
+                    <div class="working-thumb">
+                        <img class="working-img" src="./img/img(2).jpg" alt="Создает мобильные приложения" width="370">
+                    <div class="working-text"><p>Мобильные приложения</p></div>
+                    </div>
                 </li>
-                <li class="item">
-                    <a href="/"><img class="section-img" src="./img/img(3).jpg" alt="Создает дизайн" width="370"></a>
+                <li class="working-item">
+                    <div class="working-thumb">
+                        <img class="working-img" src="./img/img(3).jpg" alt="Создает дизайн" width="370">
+                    <div class="working-text"><p>Дизайнерские решения</p></div>
+                </div>                   
                 </li>
             </ul>
             </div>
@@ -375,5 +388,6 @@
         </div>
         </div>        
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
